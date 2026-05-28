@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wemos D1 Mini Firmware Installer</title>
+
+  <!-- ESP Web Tools install button -->
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module">
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="badge">Wemos D1 Mini / ESP8266</div>
+      <h1>Firmware Installer</h1>
+      <p class="lead">
+        Plug the Wemos D1 mini into USB, use Chrome or Edge, then click Install.
+        No Arduino IDE needed on the client computer.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>1. Connect the board</h2>
+      <p>
+        Use a data-capable USB cable. Some charging-only cables will power the board
+        but will not show a serial port.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Install firmware</h2>
+      <p>
+        Click the button below and select the USB serial port for the Wemos D1 mini.
+      </p>
+
+      <div class="installer-box">
+        <esp-web-install-button manifest="manifest.json">
+          <button slot="activate" class="install-button">Install firmware</button>
+          <span slot="unsupported">
+            Your browser does not support Web Serial. Please use Chrome or Edge on desktop.
+          </span>
+        </esp-web-install-button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. First-time setup</h2>
+      <p>
+        After flashing, your firmware can start its own setup Wi-Fi network, for example:
+      </p>
+      <pre><code>TrainController-Setup</code></pre>
+      <p>
+        Then clients can enter Wi-Fi, server URL, device name, or train ID in your own setup portal.
+      </p>
+    </section>
+
+    <section class="card warning">
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li>If no port appears, install the CH340 USB serial driver.</li>
+        <li>Use Chrome or Edge. Safari and iOS browsers are not suitable for this workflow.</li>
+        <li>Try another USB cable if the board powers on but is not detected.</li>
+        <li>Close Arduino IDE, serial monitors, or other apps using the same COM port.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        Replace <code>firmware/wemos-d1-mini-firmware.bin</code> with your exported Arduino binary.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
