@@ -69,6 +69,36 @@ h2 {
   box-shadow: 0 24px 70px rgba(0,0,0,0.25);
 }
 
+.driver-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 13px 18px;
+  border: 1px solid rgba(102,224,138,0.45);
+  background: rgba(102,224,138,0.10);
+  color: var(--text);
+  font-weight: 800;
+}
+
+.secondary-button:hover {
+  background: rgba(102,224,138,0.18);
+  transform: translateY(-1px);
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .installer-box {
   display: flex;
   align-items: center;

@@ -2,11 +2,21 @@
 
 This is a static website starter for flashing precompiled Arduino firmware to a Wemos D1 mini / ESP8266 from the browser.
 
+## Client steps
+
+1. Install the CH340/CH341 USB serial driver:
+   - Windows: https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP
+   - Mac: https://github.com/wemos/ch340_driver/raw/master/CH341SER_MAC_1.5.ZIP
+2. Reconnect the Wemos D1 mini.
+3. Open the installer page in Chrome or Edge.
+4. Click Install firmware.
+5. Select the Wemos serial port.
+
 ## What clients need
 
 - Chrome or Edge on desktop
 - A data-capable USB cable
-- CH340 driver if their Wemos clone is not detected
+- CH340/CH341 driver if their Wemos clone is not detected
 
 ## What you need to do
 
@@ -27,11 +37,6 @@ This is a static website starter for flashing precompiled Arduino firmware to a 
 The website does not compile Arduino code. It flashes your already-compiled `.bin` firmware.
 
 That is better for client use because your libraries, board core, and project code are already baked into the firmware binary.
-
-## Testing locally
-
-Because browser serial features are stricter on permissions, test from an HTTPS site where possible.
-GitHub Pages is a simple option.
 
 ## Recommended firmware setup flow
 

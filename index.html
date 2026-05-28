@@ -26,7 +26,35 @@
     </section>
 
     <section class="card">
-      <h2>1. Connect the board</h2>
+      <h2>1. Install the USB driver</h2>
+      <p>
+        Many Wemos D1 mini boards use the CH340/CH341 USB-serial chip. Installing
+        the driver first helps your computer detect the board correctly.
+      </p>
+
+      <div class="driver-buttons">
+        <a class="secondary-button"
+           href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP"
+           target="_blank"
+           rel="noopener">
+          Download Windows driver
+        </a>
+
+        <a class="secondary-button"
+           href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_MAC_1.5.ZIP"
+           target="_blank"
+           rel="noopener">
+          Download Mac driver
+        </a>
+      </div>
+
+      <p class="small-note">
+        After installing the driver, reconnect the Wemos D1 mini before continuing.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Connect the board</h2>
       <p>
         Use a data-capable USB cable. Some charging-only cables will power the board
         but will not show a serial port.
@@ -34,7 +62,7 @@
     </section>
 
     <section class="card">
-      <h2>2. Install firmware</h2>
+      <h2>3. Install firmware</h2>
       <p>
         Click the button below and select the USB serial port for the Wemos D1 mini.
       </p>
@@ -50,7 +78,7 @@
     </section>
 
     <section class="card">
-      <h2>3. First-time setup</h2>
+      <h2>4. First-time setup</h2>
       <p>
         After flashing, your firmware can start its own setup Wi-Fi network, for example:
       </p>
@@ -63,10 +91,11 @@
     <section class="card warning">
       <h2>Troubleshooting</h2>
       <ul>
-        <li>If no port appears, install the CH340 USB serial driver.</li>
-        <li>Use Chrome or Edge. Safari and iOS browsers are not suitable for this workflow.</li>
+        <li>Use Chrome or Edge on a desktop computer.</li>
+        <li>If no port appears, install the CH340/CH341 USB serial driver above.</li>
         <li>Try another USB cable if the board powers on but is not detected.</li>
         <li>Close Arduino IDE, serial monitors, or other apps using the same COM port.</li>
+        <li>After driver installation, unplug and reconnect the Wemos D1 mini.</li>
       </ul>
     </section>
 
