@@ -1,32 +1,25 @@
-# PRM Client Firmware Installer - Embed Ready
+# PRM Code Flasher - PRM Page Style
 
-This version is designed to work well as a standalone GitHub Pages installer and later inside an iframe.
+This is the standalone top-level firmware flasher page intended to be opened from the Wix code page in a new tab.
 
-The visual style is intentionally quieter:
-- light PRM-style base
-- compact header
-- no promotional hero block
-- clear technical steps
-- reduced marketing language
+It includes:
+- PRM-style intro section
+- experimental feature note
+- hardware recommendation block
+- link to the electronics guide
+- firmware installer using ESP Web Tools
+- post-flash Wi-Fi setup instructions
 
-## Client flow
+## Electronics link
 
-1. Install USB driver.
-2. Connect the Wemos D1 mini locomotive controller.
-3. Install firmware from the browser.
-4. Connect to the default locomotive Wi-Fi network:
-
-   PRM LOCOMOTIVE
-
-5. Optional: open http://192.168.4.1 and rename the locomotive Wi-Fi or set a password.
-6. Reconnect to the locomotive Wi-Fi and open the PRM controller app.
-
-## Forgotten password
-
-Connect the Wemos D1 mini to USB and repeat the install steps. When prompted, choose the clean install / erase option. The controller returns to the default Wi-Fi network: PRM LOCOMOTIVE.
+https://www.pocketrailwaymuseum.com/electronics
 
 ## Firmware file
 
 Replace this file with your compiled Arduino binary:
 
 firmware/wemos-d1-mini-firmware.bin
+
+## Homepage link
+
+A bottom button links back to https://www.pocketrailwaymuseum.com/
