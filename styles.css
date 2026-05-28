@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Suez+One&display=swap");
+
 :root {
   --bg: #f7f4ee;
   --paper: #ffffff;
@@ -14,23 +16,23 @@
   --shadow: rgba(30, 24, 15, 0.08);
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--body); font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--body); font-family: "Roboto", Arial, Helvetica, sans-serif; }
 .content { width: min(860px, calc(100% - 34px)); margin: 0 auto; }
 .intro-section { padding: 22px 0 34px; background: var(--bg); }
 h1,h2,h3 { color: var(--ink); }
-h1 { margin: 0 0 22px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.04em; }
+h1 { margin: 0 0 22px; font-family: "Suez One", Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.04em; }
 .intro-text { max-width: 790px; margin: 0 0 28px; font-size: clamp(1.05rem, 2.2vw, 1.22rem); line-height: 1.55; font-weight: 700; }
 .experimental-note { margin: 0; color: red; font-size: clamp(1rem, 2vw, 1.12rem); line-height: 1.5; font-weight: 800; }
 .hardware-section { background: var(--red); color: white; padding: 28px 0 40px; }
 .centered { text-align: center; }
-.hardware-section h2 { margin: 0 0 22px; color: white; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: .95; letter-spacing: -.05em; }
+.hardware-section h2 { margin: 0 0 22px; color: white; font-family: "Suez One", Georgia, "Times New Roman", serif; font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: .95; letter-spacing: -.05em; }
 .hardware-text { margin: 0 auto 32px; max-width: 980px; color: white; font-size: clamp(1rem, 2.4vw, 1.2rem); line-height: 1.5; font-weight: 800; }
 .hardware-text strong { color: var(--yellow); }
 .yellow-button { display: inline-flex; align-items: center; justify-content: center; width: min(540px, 100%); min-height: 60px; padding: 16px 24px; border-radius: 9px; background: var(--yellow); color: #060615; text-decoration: none; font-weight: 900; }
 .yellow-button:hover { filter: brightness(.98); transform: translateY(-1px); }
 .setup-flow { padding: 30px 0 0; }
 .steps-intro { margin: 0 0 16px; }
-.steps-intro h2 { margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; letter-spacing: -.04em; }
+.steps-intro h2 { margin: 0 0 8px; font-family: "Suez One", Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; letter-spacing: -.04em; }
 .steps-intro p { margin-top: 0; color: var(--muted); line-height: 1.55; }
 .step-card,.help-card,.reset-card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 10px 28px var(--shadow); }
 .step-card { display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 22px; margin: 14px 0; }
@@ -51,7 +53,7 @@ p { line-height: 1.55; }
 .address { display: inline-block; font-size: 1.06rem; padding: 8px 11px; border: 1px solid #d7e1ff; }
 .help-card,.reset-card { padding: 22px; margin-top: 18px; }
 .reset-card { background: #fff8ea; }
-.help-card h2,.reset-card h2 { margin: 0 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -.03em; }
+.help-card h2,.reset-card h2 { margin: 0 0 10px; font-family: "Suez One", Georgia, "Times New Roman", serif; font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -.03em; }
 .small-network { font-size: 1rem; margin-top: 4px; }
 details { border-top: 1px solid var(--line); padding: 13px 0; }
 details:first-of-type { margin-top: 8px; }
@@ -83,4 +85,48 @@ footer { color: var(--muted); text-align: center; margin: 28px 0 26px; font-size
 .home-button:hover {
   transform: translate(1px, 1px);
   box-shadow: 2px 2px 0 var(--body, #090b2b);
+}
+
+
+.port-hint {
+  border: 1px solid #d7e1ff;
+  border-radius: 14px;
+  background: #edf2ff;
+  padding: 12px 14px;
+  margin: 14px 0;
+  color: var(--body, #090b2b);
+  line-height: 1.5;
+}
+
+.port-example {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 900;
+  color: var(--blue, #3155a4);
+}
+
+
+/* PRM typography */
+body,
+button,
+a,
+p,
+summary,
+input {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h1,
+h2,
+.hardware-section h2,
+.steps-intro h2,
+.help-card h2,
+.reset-card h2 {
+  font-family: "Suez One", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }

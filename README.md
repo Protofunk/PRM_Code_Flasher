@@ -23,3 +23,14 @@ firmware/wemos-d1-mini-firmware.bin
 ## Homepage link
 
 A bottom button links back to https://www.pocketrailwaymuseum.com/
+
+## Port selection hint
+
+When the browser asks for a serial port, the Wemos D1 mini usually appears as something like `USB Serial (COM...)` on Windows. On Mac it may appear as `USB Serial` or `wchusbserial`.
+
+## Fonts
+
+This version imports Google Fonts:
+- Suez One for titles
+- Roboto Bold for main text
+
