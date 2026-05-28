@@ -1,6 +1,11 @@
-# PRM Client Firmware Installer
+# PRM Client Firmware Installer - Website Style
 
-Client-facing firmware installer for the Pocket Railway Museum Wemos D1 mini locomotive controller.
+This version is styled closer to the live Pocket Railway Museum website:
+- light webshop-style background
+- playful bold headings
+- orange/blue/green accents
+- "Playfully made" brand language
+- client-facing setup flow
 
 ## Client flow
 
@@ -23,14 +28,3 @@ Client-facing firmware installer for the Pocket Railway Museum Wemos D1 mini loc
 Replace this file with your compiled Arduino binary:
 
 firmware/wemos-d1-mini-firmware.bin
-
-## Hosting
-
-This is a static site. It can be hosted on GitHub Pages, Netlify, Vercel, or embedded later in the PRM website.
-
-Keep these paths together:
-
-- index.html
-- styles.css
-- manifest.json
-- firmware/wemos-d1-mini-firmware.bin

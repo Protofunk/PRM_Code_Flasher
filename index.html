@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pocket Railway Museum Locomotive Setup</title>
 
-  <!-- ESP Web Tools install button -->
   <script
     type="module"
     src="https://unpkg.com/esp-web-tools@latest/dist/web/install-button.js?module">
@@ -16,22 +15,51 @@
 
 <body>
   <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">PRM</div>
+        <div>
+          <strong>Pocket Railway Museum</strong>
+          <span>Playfully made</span>
+        </div>
+      </div>
+      <a class="tiny-link" href="https://www.pocketrailwaymuseum.com/" target="_blank" rel="noopener">
+        Visit webshop
+      </a>
+    </header>
+
     <section class="hero">
-      <div class="brand-kicker">Pocket Railway Museum</div>
-      <h1>Locomotive Controller Setup</h1>
-      <p class="lead">
-        This page installs the controller software onto your Wemos D1 mini locomotive board.
-        Follow the steps below in order.
-      </p>
-      <p class="browser-note">
-        Please use <strong>Chrome</strong> or <strong>Microsoft Edge</strong> on a desktop or laptop computer.
-      </p>
+      <div class="hero-copy">
+        <p class="eyebrow">Locomotive controller setup</p>
+        <h1>Install, name, and play.</h1>
+        <p class="lead">
+          Use this page to install the controller software onto your Wemos D1 mini locomotive board.
+          After installation, you can name your locomotive Wi‑Fi and start driving with the PRM controller app.
+        </p>
+        <p class="browser-note">
+          Use <strong>Chrome</strong> or <strong>Microsoft Edge</strong> on a desktop or laptop computer.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="track-lines"></div>
+        <div class="train-chip">3D printed + interactive</div>
+        <h2>Bring your model to life</h2>
+        <p>
+          Firmware for lights, motion, and locomotive control.
+        </p>
+      </div>
+    </section>
+
+    <section class="steps-intro">
+      <h2>Setup steps</h2>
+      <p>Follow these steps in order. The whole process happens through your browser.</p>
     </section>
 
     <section class="step-card">
       <div class="step-number">1</div>
       <div class="step-content">
-        <h2>Install the USB driver</h2>
+        <h3>Install the USB driver</h3>
         <p>
           Many Wemos D1 mini boards use a CH340/CH341 USB chip. Installing this driver helps
           your computer recognize the board.
@@ -62,7 +90,7 @@
     <section class="step-card">
       <div class="step-number">2</div>
       <div class="step-content">
-        <h2>Connect the locomotive controller</h2>
+        <h3>Connect the locomotive controller</h3>
         <p>
           Plug the Wemos D1 mini into your computer with a data-capable USB cable.
           Some charging cables power the board but do not allow programming.
@@ -73,7 +101,7 @@
     <section class="step-card">
       <div class="step-number">3</div>
       <div class="step-content">
-        <h2>Install the firmware</h2>
+        <h3>Install the firmware</h3>
         <p>
           Click the install button below. When your browser asks for a serial port,
           choose the Wemos / USB serial device.
@@ -89,7 +117,7 @@
         </div>
 
         <p class="small-note">
-          Keep the board connected until the installation is complete.
+          Keep the board connected until installation is complete.
         </p>
       </div>
     </section>
@@ -97,9 +125,9 @@
     <section class="step-card">
       <div class="step-number">4</div>
       <div class="step-content">
-        <h2>Connect to the locomotive Wi‑Fi</h2>
+        <h3>Connect to the locomotive Wi‑Fi</h3>
         <p>
-          After installation, the controller will restart and create its own Wi‑Fi network.
+          After installation, the controller restarts and creates its own Wi‑Fi network.
           Open your Wi‑Fi settings and connect to:
         </p>
 
@@ -115,7 +143,7 @@
     <section class="step-card">
       <div class="step-number">5</div>
       <div class="step-content">
-        <h2>Name your locomotive network</h2>
+        <h3>Name your locomotive network</h3>
         <p>
           Once connected to the locomotive Wi‑Fi, open this address in your browser:
         </p>
@@ -138,7 +166,7 @@
     <section class="step-card">
       <div class="step-number">6</div>
       <div class="step-content">
-        <h2>Reconnect and start driving</h2>
+        <h3>Reconnect and start driving</h3>
         <p>
           After saving the new Wi‑Fi name or password, the controller restarts.
           Connect to the new locomotive Wi‑Fi network, then open your PRM controller app.
@@ -151,7 +179,8 @@
     </section>
 
     <section class="help-card">
-      <h2>Troubleshooting</h2>
+      <h2>Need help?</h2>
+
       <details>
         <summary>I do not see a USB serial device.</summary>
         <p>
@@ -184,7 +213,7 @@
     </section>
 
     <footer>
-      <p>Pocket Railway Museum locomotive controller installer</p>
+      <p>Pocket Railway Museum · Playfully made</p>
     </footer>
   </main>
 </body>
