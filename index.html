@@ -15,45 +15,31 @@
 
 <body>
   <main class="page">
-    <header class="topbar">
+    <header class="topbar compact">
       <div class="brand">
         <div class="brand-mark">PRM</div>
         <div>
           <strong>Pocket Railway Museum</strong>
-          <span>Playfully made</span>
+          <span>Locomotive controller setup</span>
         </div>
       </div>
-      <a class="tiny-link" href="https://www.pocketrailwaymuseum.com/" target="_blank" rel="noopener">
-        Visit webshop
-      </a>
     </header>
 
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Locomotive controller setup</p>
-        <h1>Install, name, and play.</h1>
-        <p class="lead">
-          Use this page to install the controller software onto your Wemos D1 mini locomotive board.
-          After installation, you can name your locomotive Wi‑Fi and start driving with the PRM controller app.
-        </p>
-        <p class="browser-note">
-          Use <strong>Chrome</strong> or <strong>Microsoft Edge</strong> on a desktop or laptop computer.
-        </p>
-      </div>
-
-      <div class="hero-card">
-        <div class="track-lines"></div>
-        <div class="train-chip">3D printed + interactive</div>
-        <h2>Bring your model to life</h2>
-        <p>
-          Firmware for lights, motion, and locomotive control.
-        </p>
-      </div>
+    <section class="intro">
+      <p class="eyebrow">Firmware installer</p>
+      <h1>Locomotive controller setup</h1>
+      <p class="lead">
+        Follow the steps below to install the controller firmware on your Wemos D1 mini
+        and connect it to your PRM locomotive controller app.
+      </p>
+      <p class="browser-note">
+        Use <strong>Chrome</strong> or <strong>Microsoft Edge</strong> on a desktop or laptop computer.
+      </p>
     </section>
 
     <section class="steps-intro">
       <h2>Setup steps</h2>
-      <p>Follow these steps in order. The whole process happens through your browser.</p>
+      <p>Follow these steps in order.</p>
     </section>
 
     <section class="step-card">
@@ -148,18 +134,14 @@
           Once connected to the locomotive Wi‑Fi, open this address in your browser:
         </p>
 
-        <a class="setup-link" href="http://192.168.4.1" target="_blank" rel="noopener">
+        <div class="copy-address" aria-label="Type this address into your browser">
           http://192.168.4.1
-        </a>
+        </div>
 
         <p>
+          Type or copy this address into your browser while you are connected to the locomotive Wi‑Fi.
           On the setup page, you can rename the locomotive Wi‑Fi and optionally add a password.
         </p>
-
-        <div class="rule-box">
-          <strong>Password rule:</strong>
-          leave the password empty for an open network, or use at least 8 characters.
-        </div>
       </div>
     </section>
 
@@ -176,6 +158,19 @@
         </p>
         <code class="address">192.168.4.1</code>
       </div>
+    </section>
+
+    <section class="reset-card">
+      <h2>Forgotten Wi‑Fi password?</h2>
+      <p>
+        No problem. Connect the Wemos D1 mini to your computer again and repeat steps 1–3 to install
+        the firmware again. When asked, choose the clean install / erase option. The controller will
+        return to the default Wi‑Fi network:
+      </p>
+      <div class="network-name small-network">PRM LOCOMOTIVE</div>
+      <p>
+        Then connect to it and open <code>http://192.168.4.1</code> to set a new name or password.
+      </p>
     </section>
 
     <section class="help-card">
