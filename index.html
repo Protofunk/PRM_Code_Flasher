@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Wemos D1 Mini Firmware Installer</title>
+  <title>Pocket Railway Museum Locomotive Setup</title>
 
   <!-- ESP Web Tools install button -->
   <script
@@ -17,92 +17,174 @@
 <body>
   <main class="page">
     <section class="hero">
-      <div class="badge">Wemos D1 Mini / ESP8266</div>
-      <h1>Firmware Installer</h1>
+      <div class="brand-kicker">Pocket Railway Museum</div>
+      <h1>Locomotive Controller Setup</h1>
       <p class="lead">
-        Plug the Wemos D1 mini into USB, use Chrome or Edge, then click Install.
-        No Arduino IDE needed on the client computer.
+        This page installs the controller software onto your Wemos D1 mini locomotive board.
+        Follow the steps below in order.
+      </p>
+      <p class="browser-note">
+        Please use <strong>Chrome</strong> or <strong>Microsoft Edge</strong> on a desktop or laptop computer.
       </p>
     </section>
 
-    <section class="card">
-      <h2>1. Install the USB driver</h2>
-      <p>
-        Many Wemos D1 mini boards use the CH340/CH341 USB-serial chip. Installing
-        the driver first helps your computer detect the board correctly.
-      </p>
+    <section class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h2>Install the USB driver</h2>
+        <p>
+          Many Wemos D1 mini boards use a CH340/CH341 USB chip. Installing this driver helps
+          your computer recognize the board.
+        </p>
 
-      <div class="driver-buttons">
-        <a class="secondary-button"
-           href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP"
-           target="_blank"
-           rel="noopener">
-          Download Windows driver
-        </a>
+        <div class="button-row">
+          <a class="secondary-button"
+             href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP"
+             target="_blank"
+             rel="noopener">
+            Windows driver
+          </a>
 
-        <a class="secondary-button"
-           href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_MAC_1.5.ZIP"
-           target="_blank"
-           rel="noopener">
-          Download Mac driver
-        </a>
-      </div>
+          <a class="secondary-button"
+             href="https://github.com/wemos/ch340_driver/raw/master/CH341SER_MAC_1.5.ZIP"
+             target="_blank"
+             rel="noopener">
+            Mac driver
+          </a>
+        </div>
 
-      <p class="small-note">
-        After installing the driver, reconnect the Wemos D1 mini before continuing.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>2. Connect the board</h2>
-      <p>
-        Use a data-capable USB cable. Some charging-only cables will power the board
-        but will not show a serial port.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>3. Install firmware</h2>
-      <p>
-        Click the button below and select the USB serial port for the Wemos D1 mini.
-      </p>
-
-      <div class="installer-box">
-        <esp-web-install-button manifest="manifest.json">
-          <button slot="activate" class="install-button">Install firmware</button>
-          <span slot="unsupported">
-            Your browser does not support Web Serial. Please use Chrome or Edge on desktop.
-          </span>
-        </esp-web-install-button>
+        <p class="small-note">
+          After installing the driver, unplug and reconnect the Wemos D1 mini.
+        </p>
       </div>
     </section>
 
-    <section class="card">
-      <h2>4. First-time setup</h2>
-      <p>
-        After flashing, your firmware can start its own setup Wi-Fi network, for example:
-      </p>
-      <pre><code>TrainController-Setup</code></pre>
-      <p>
-        Then clients can enter Wi-Fi, server URL, device name, or train ID in your own setup portal.
-      </p>
+    <section class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h2>Connect the locomotive controller</h2>
+        <p>
+          Plug the Wemos D1 mini into your computer with a data-capable USB cable.
+          Some charging cables power the board but do not allow programming.
+        </p>
+      </div>
     </section>
 
-    <section class="card warning">
+    <section class="step-card">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h2>Install the firmware</h2>
+        <p>
+          Click the install button below. When your browser asks for a serial port,
+          choose the Wemos / USB serial device.
+        </p>
+
+        <div class="installer-box">
+          <esp-web-install-button manifest="manifest.json">
+            <button slot="activate" class="install-button">Install locomotive firmware</button>
+            <span slot="unsupported">
+              Your browser does not support USB serial flashing. Please use Chrome or Edge on desktop.
+            </span>
+          </esp-web-install-button>
+        </div>
+
+        <p class="small-note">
+          Keep the board connected until the installation is complete.
+        </p>
+      </div>
+    </section>
+
+    <section class="step-card">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h2>Connect to the locomotive Wi‑Fi</h2>
+        <p>
+          After installation, the controller will restart and create its own Wi‑Fi network.
+          Open your Wi‑Fi settings and connect to:
+        </p>
+
+        <div class="network-name">PRM LOCOMOTIVE</div>
+
+        <p class="small-note">
+          The default network has no password. While connected to the locomotive Wi‑Fi,
+          your device may temporarily lose normal internet access. This is expected.
+        </p>
+      </div>
+    </section>
+
+    <section class="step-card">
+      <div class="step-number">5</div>
+      <div class="step-content">
+        <h2>Name your locomotive network</h2>
+        <p>
+          Once connected to the locomotive Wi‑Fi, open this address in your browser:
+        </p>
+
+        <a class="setup-link" href="http://192.168.4.1" target="_blank" rel="noopener">
+          http://192.168.4.1
+        </a>
+
+        <p>
+          On the setup page, you can rename the locomotive Wi‑Fi and optionally add a password.
+        </p>
+
+        <div class="rule-box">
+          <strong>Password rule:</strong>
+          leave the password empty for an open network, or use at least 8 characters.
+        </div>
+      </div>
+    </section>
+
+    <section class="step-card">
+      <div class="step-number">6</div>
+      <div class="step-content">
+        <h2>Reconnect and start driving</h2>
+        <p>
+          After saving the new Wi‑Fi name or password, the controller restarts.
+          Connect to the new locomotive Wi‑Fi network, then open your PRM controller app.
+        </p>
+        <p>
+          The controller address remains:
+        </p>
+        <code class="address">192.168.4.1</code>
+      </div>
+    </section>
+
+    <section class="help-card">
       <h2>Troubleshooting</h2>
-      <ul>
-        <li>Use Chrome or Edge on a desktop computer.</li>
-        <li>If no port appears, install the CH340/CH341 USB serial driver above.</li>
-        <li>Try another USB cable if the board powers on but is not detected.</li>
-        <li>Close Arduino IDE, serial monitors, or other apps using the same COM port.</li>
-        <li>After driver installation, unplug and reconnect the Wemos D1 mini.</li>
-      </ul>
+      <details>
+        <summary>I do not see a USB serial device.</summary>
+        <p>
+          Install the Windows or Mac USB driver from step 1, reconnect the board, and try another USB cable.
+        </p>
+      </details>
+
+      <details>
+        <summary>The install button does not appear.</summary>
+        <p>
+          Use Chrome or Microsoft Edge on a desktop or laptop computer. Safari and mobile browsers are not recommended.
+        </p>
+      </details>
+
+      <details>
+        <summary>I renamed the Wi‑Fi and now the old network disappeared.</summary>
+        <p>
+          That is normal. Look for the new name you entered, connect to it, and then open
+          <code>http://192.168.4.1</code>.
+        </p>
+      </details>
+
+      <details>
+        <summary>I cannot access the internet while connected to the locomotive.</summary>
+        <p>
+          This is expected. The locomotive creates its own local Wi‑Fi network for control.
+          Reconnect to your normal Wi‑Fi network when you are finished setting it up.
+        </p>
+      </details>
     </section>
 
     <footer>
-      <p>
-        Replace <code>firmware/wemos-d1-mini-firmware.bin</code> with your exported Arduino binary.
-      </p>
+      <p>Pocket Railway Museum locomotive controller installer</p>
     </footer>
   </main>
 </body>

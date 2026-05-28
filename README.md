@@ -1,60 +1,36 @@
-# Wemos D1 Mini Web Firmware Installer
+# PRM Client Firmware Installer
 
-This is a static website starter for flashing precompiled Arduino firmware to a Wemos D1 mini / ESP8266 from the browser.
+Client-facing firmware installer for the Pocket Railway Museum Wemos D1 mini locomotive controller.
 
-## Client steps
+## Client flow
 
-1. Install the CH340/CH341 USB serial driver:
-   - Windows: https://github.com/wemos/ch340_driver/raw/master/CH341SER_WIN_3.5.ZIP
-   - Mac: https://github.com/wemos/ch340_driver/raw/master/CH341SER_MAC_1.5.ZIP
-2. Reconnect the Wemos D1 mini.
-3. Open the installer page in Chrome or Edge.
-4. Click Install firmware.
-5. Select the Wemos serial port.
+1. Install USB driver.
+2. Connect the Wemos D1 mini locomotive controller.
+3. Install firmware from the browser.
+4. Connect to the default locomotive Wi-Fi network:
 
-## What clients need
+   PRM LOCOMOTIVE
 
-- Chrome or Edge on desktop
-- A data-capable USB cable
-- CH340/CH341 driver if their Wemos clone is not detected
+5. Open:
 
-## What you need to do
+   http://192.168.4.1
 
-1. Open your Arduino project.
-2. Select the correct ESP8266 board, usually something like:
-   - LOLIN(WEMOS) D1 R2 & mini
-   - Flash size: commonly 4MB, depending on your board
-3. Export the compiled binary from Arduino IDE.
-4. Rename the exported `.bin` to:
+6. Rename the locomotive Wi-Fi and optionally set a password.
+7. Reconnect to the new Wi-Fi name and open the PRM controller app.
 
-   firmware/wemos-d1-mini-firmware.bin
+## Firmware file
 
-5. Replace the placeholder file in this folder.
-6. Host this whole folder on GitHub Pages, Netlify, Vercel, or your own HTTPS site.
+Replace this file with your compiled Arduino binary:
 
-## Important
+firmware/wemos-d1-mini-firmware.bin
 
-The website does not compile Arduino code. It flashes your already-compiled `.bin` firmware.
+## Hosting
 
-That is better for client use because your libraries, board core, and project code are already baked into the firmware binary.
+This is a static site. It can be hosted on GitHub Pages, Netlify, Vercel, or embedded later in the PRM website.
 
-## Recommended firmware setup flow
+Keep these paths together:
 
-For client projects, avoid hardcoding Wi-Fi and server details.
-
-Instead, make the flashed firmware start a setup access point after first boot, for example:
-
-TrainController-Setup
-
-Then expose a small configuration page at:
-
-192.168.4.1
-
-Store:
-- Wi-Fi SSID
-- Wi-Fi password
-- WebSocket or HTTP server URL
-- Device name
-- Optional train ID
-
-This way you can use one generic firmware for many clients.
+- index.html
+- styles.css
+- manifest.json
+- firmware/wemos-d1-mini-firmware.bin
